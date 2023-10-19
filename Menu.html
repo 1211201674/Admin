@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <style>
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    h4 {
+      margin: 0;
+    }
+    p {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3e8e41;
+    }
+    #search-container {
+      display: flex;
+      align-items: center;
+    }
+    #search-logo {
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .back-to-home {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <h2>Menu</h2>
+    <div id="search-container">
+      <img src="search.png" alt="search icon" id="search-logo">
+    <input type="text" id="search-input" placeholder="Search...">
+    </div>
+    <ul>
+      <li>
+        <h3>Foods</h3>
+        <ul>
+          <li>
+            <h4>Burger</h4>           
+            <p>Price: RM5.00</p>
+            <button class="add" data-price="5.00" data-name="Burger">Edit</button>
+            <button class="delete">Delete</button>
+          </li>
+          <li>
+            <h4>Double Cheese Burger</h4>
+            <p>Price: RM10.00</p>
+            <button class="add" data-price="10.00" data-name="Double Cheese Burger">Edit</button>
+            <button class="delete">Delete</button>
+          </li>
+          <li>
+            <h4>Chicken Burger</h4>
+            <p>Price: RM8.00</p>
+            <button class="add" data-price="8.00" data-name="Chicken Burger">Edit</button>
+            <button class="delete">Delete</button>
+          </li>
+          <li>
+            <h4>Pasta</h4>
+            <p>Price: RM6.00</p>
+            <button class="add" data-price="6.00" data-name="Pasta">Edit</button>
+            <button class="delete">Delete</button>
+          </li>
+          <li>
+            <h4>Spaghetti</h4>
+            <p>Price: RM8.00</p>
+            <button class="add" data-price="8.00" data-name="Spaghetti">Edit</button>
+            <button class="delete">Delete</button>
+          </li>
+          <li>
+
+            <h4>Spaghetti Carbonara</h4>
+            <p>Price: RM12.00</p>
+            <button class="add" data-price="12.00" data-name="Spaghetti Carbonara">Edit</button>
+            <button class="delete">Delete</button>
+            </li>
+            <li>
+            <h4>Pizza</h4>
+            <p>Price: RM20.00</p>
+            <button class="add" data-price="20.00" data-name="Pizza">Edit</button>
+            <button class="delete">Delete</button>
+            </li>
+            <li>
+            <h4>Chicken Chop</h4>
+            <p>Price: RM15.00</p>
+            <button class="add" data-price="15.00" data-name="Chicken Chop">Edit</button>
+            <button class="delete">Delete</button>
+            </li>
+            <li>
+            <h4>Lamb Chop</h4>
+            <p>Price: RM25.00</p>
+            <button class="add" data-price="25.00" data-name="Lamb Chop">Edit</button>
+            <button class="delete">Delete</button>
+            </li>
+            <li>
+            <h4>Swedish Meatballs</h4>
+            <p>Price: RM8.00</p>
+            <button class="add" data-price="8.00" data-name="Swedish Meatballs">Edit</button>
+            <button class="delete">Delete</button>
+            </li>
+              <li>
+            </ul>
+          </li>
+          <li>
+            <h3>Beverages</h3>
+            <ul>
+              <li>
+                <h4>Tea</h4>
+                <p>Price: RM3.00</p>
+                <button class="add" data-price="3.00" data-name="Tea">Edit</button>
+            <button class="delete">Delete</button>
+              </li>
+              <li>
+                <h4>Green Tea</h4>
+                <p>Price: RM5.00</p>
+                <button class="add" data-price="5.00" data-name="Green Tea">Edit</button>
+            <button class="delete">Delete</button>
+              </li>
+              <li>
+                <h4>Iced Milo</h4>
+                <p>Price: RM5.00</p>
+                <button class="add" data-price="5.00" data-name="Iced Milo">Edit</button>
+            <button class="delete">Delete</button>
+              </li>
+              <li>
+                <h4>Oligo</h4>
+                <p>Price: RM5.00</p>
+                <button class="add" data-price="5.00" data-name="Oligo">Edit</button>
+            <button class="delete">Delete</button>
+              </li>
+              <li>
+                <h4>Hot Chocolate</h4>
+                <p>Price: RM8.00</p>
+                <button class="add" data-price="8.00" data-name="Hot Chocolate">Edit</button>
+            <button class="delete">Delete</button>
+              </li>
+              <li>
+                <h4>Iced Coffee</h4>
+                <p>Price: RM4.00</p>
+                <button class="add" data-price="4.00" data-name="Iced Coffee">Edit</button>
+            <button class="delete">Delete</button>
+              </li>
+              <li>
+                <h4>Hot Coffee</h4>
+                <p>Price: RM5.00</p>
+                <button class="add" data-price="5.00" data-name="Hot Coffee">Edit</button>
+            <button class="delete">Delete</button>
+              </li>
+              <li>
+                <h4>Plain Water</h4>
+                <p>Price: RM2.00</p>
+                <button class="add" data-price="2.00" data-name="Plain Water">Edit</button>
+            <button class="delete">Delete</button>
+              </li>
+              <li>
+            </ul>
+          </li>
+            
+            </ul>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <span class="back-to-home" onclick="goToHomePage()">Back to Home Page</span>
+
+      <script>
+       
+      document.addEventListener('DOMContentLoaded', function() {
+       
+        var searchInput = document.getElementById('search-input');
+      
+        
+        searchInput.addEventListener('input', function() {
+          var filter = searchInput.value.toLowerCase();
+          var menuItems = document.querySelectorAll('.menu li');
+      
+          menuItems.forEach(function(item) {
+            var itemName = item.getElementsByTagName('h4')[0].textContent.toLowerCase();
+            var itemPrice = item.getElementsByTagName('p')[0].textContent.toLowerCase();
+      
+            
+            if (itemName.indexOf(filter) > -1 || itemPrice.indexOf(filter) > -1) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      
+        
+        var addButtons = document.querySelectorAll('.add');
+        addButtons.forEach(function(button) {
+          button.addEventListener('click', function() {
+            var itemName = button.getAttribute('data-name');
+            var itemPrice = button.getAttribute('data-price');
+            
+            console.log('Add button clicked for item:', itemName);
+            console.log('Price:', itemPrice);
+          });
+        });
+      
+        
+        var deleteButtons = document.querySelectorAll('.delete');
+        deleteButtons.forEach(function(button) {
+          button.addEventListener('click', function() {
+          
+            var listItem = button.parentNode;
+            listItem.parentNode.removeChild(listItem);
+            console.log('Delete button clicked');
+          });
+        });
+      });
+      
+      function goToHomePage() {
+        window.location.href = "User Interface(Admin).html"; 
+      }
+      </script>
+      </body>
+      </html>
+
+    

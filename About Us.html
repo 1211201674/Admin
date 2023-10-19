@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Western Food And Beverages System</title>
+  <style>
+      #about-us {
+      background-color: #f2f2f2;
+      padding: 50px;
+    }
+    
+    #about-us h2 {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    #about-us p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #666;
+    }
+    
+    
+    #mission {
+      background-color: #e6e6e6;
+      padding: 50px;
+    }
+    
+    #mission h4 {
+      font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    
+    #mission p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #666;
+    }
+    
+   
+    button {
+      background-color: #4CAF50; 
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+   
+    #back-to-home {
+      margin-top: 20px;
+    }
+  </style>
+  
+</head>
+</style>
+</head>
+<body>
+  <section id="about-us">
+    <div class="container">
+      <h2>About Us</h2>
+      <p id="about-us-content">We offer a variety type of Western foods and beverages that will wipe out your hunger and thirst. All of our foods and beverages are well prepared and very healthy in terms of nutrients. All of our foods and beverages are selling at a very reasonable price. Each of our foods and beverages are available in our menu. Although we are not affiliated with any franchise, we are still able to provide a variety of Malay local foods and beverages for customers to enjoy their meals.</p>
+      <button onclick="editAboutUs()">Edit</button>
+    </div>
+  </section>
+  <section id="mission">
+    <div class="container">
+      <h4>Our Mission</h4>
+      <p id="mission-content">Our mission is to become the biggest and successful franchise. Other than that, is to be recognised as the global leader in Malaysian Western foods and beverages Restaurant for companies and the public and private sector by partnering with our clients to provide the best and most delicious food and beverages and to achieve the excellence service.</p>
+      <button onclick="editMission()">Edit</button>
+    </div>
+  </section>
+
+  <div id="back-to-home">
+    <a href="#" onclick="navigateToHome()">Back to Home</a>
+  </div>
+
+  <script>
+    function editAboutUs() {
+      var aboutUsContent = document.getElementById("about-us-content");
+      var newContent = prompt("Enter the new content:");
+      if (newContent) {
+        aboutUsContent.innerHTML = newContent;
+      }
+    }
+    
+    function editMission() {
+      var missionContent = document.getElementById("mission-content");
+      var newContent = prompt("Enter the new content:");
+      if (newContent) {
+        missionContent.innerHTML = newContent;
+      }
+    }
+
+    function navigateToHome() {
+      alert("Going back to home..."); 
+      window.location.href = "User Interface(Admin).html"; 
+    }
+  </script>
+</body>
+</html>

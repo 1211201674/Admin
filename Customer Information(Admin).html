@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Purchase Records</title>
+	<style type="text/css">
+		form {
+			width: 80%;
+			margin: 0 auto;
+		}
+		label {
+			display: block;
+			font-weight: bold;
+			margin-top: 20px;
+		}
+		input[type="text"], textarea {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 20px;
+		}
+		table th, table td {
+			padding: 8px;
+			border: 1px solid #ddd;
+			text-align: left;
+		}
+		table th {
+			background-color: #4CAF50;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	
+
+	<div id="home">
+		<a href="User Interface(Admin)">Back to Home</a>
+	</div>
+
+	<h2>Customer Purchase History</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Order ID</th>
+				<th>Items</th>
+				<th>Amount</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>February 15, 2023</td>
+				<td>107</td>
+				<td>Nasi Ayam, Milo Ais</td>
+				<td>RM9.00</td>
+			</tr>
+			<tr>
+				<td>February 28, 2023</td>
+				<td>243</td>
+				<td>Mee Kari, Air Kosong</td>
+				<td>RM9.00</td>
+			</tr>
+			<tr>
+				<td>March 14, 2023</td>
+				<td>903</td>
+				<td>Nasi Goreng Seafood, Teh O Ais</td>
+				<td>RM13.00</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script>
+		
+		document.addEventListener("DOMContentLoaded", function() {
+		  
+		  var form = document.querySelector("form");
+
+		  
+		  form.addEventListener("submit", function(event) {
+		    event.preventDefault(); 
+
+		    
+		    var customerName = document.getElementById("customer_name").value;
+		    var customerEmail = document.getElementById("customer_email").value;
+		    
+
+		    
+		    form.reset();
+		  });
+
+		  
+		  var homeLink = document.querySelector("#home a");
+
+		  
+		  homeLink.addEventListener("click", function(event) {
+		    event.preventDefault(); 
+		    window.location.href = "User Interface(Admin).html"; 
+		  });
+		});
+	</script>
+</body>
+</html>

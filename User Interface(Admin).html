@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Western Food And Beverages System - Admin Dashboard</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.user-info {
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    width: 100%;
+		}
+
+		.logout {
+		    margin-left: auto;
+		}
+
+		table {
+		    width: 100%;
+		    border-collapse: collapse;
+		}
+
+		th, td {
+		    border: 1px solid #ddd;
+		    padding: 8px;
+		}
+
+		th {
+		    background-color: #f2f2f2;
+		}
+		
+	</style>
+	<script>
+	
+	window.onload = function() {
+		
+		const profileLink = document.querySelector('.profile a');
+		const logoutLink = document.querySelector('.logout');
+		const aboutLink = document.querySelector('#about-link');
+		const dashboardLink = document.querySelector('#dashboard-link');
+		const reservationsLink = document.querySelector('#reservations-link');
+		const tablesLink = document.querySelector('#tables-link');
+		const menuLink = document.querySelector('#menu-link');
+		const customersLink = document.querySelector('#customers-link');
+		
+		profileLink.addEventListener('click', handleProfileClick);
+		logoutLink.addEventListener('click', handleLogoutClick);
+		aboutLink.addEventListener('click', handleAboutClick);
+		dashboardLink.addEventListener('click', handleDashboardClick);
+		reservationsLink.addEventListener('click', handleReservationsClick);
+		tablesLink.addEventListener('click', handleTablesClick);
+		menuLink.addEventListener('click', handleMenuClick);
+		customersLink.addEventListener('click', handleCustomersClick);
+		
+		
+		function handleProfileClick(event) {
+			event.preventDefault();
+			
+			window.location.href = 'Profile Page (Admin).html';
+		}
+		
+		function handleLogoutClick(event) {
+			event.preventDefault();
+			
+			window.location.href = 'Login(Admin).html';
+		}
+		
+		function handleAboutClick(event) {
+			event.preventDefault();
+			
+			window.location.href = 'About Us.html';
+		}
+		
+		function handleDashboardClick(event) {
+			event.preventDefault();
+			
+			window.location.href = 'User Interface(Admin).html';
+		}
+		
+		function handleReservationsClick(event) {
+			event.preventDefault();
+			
+			window.location.href = 'Reservations(Admin).html';
+		}
+		
+		function handleTablesClick(event) {
+			event.preventDefault();
+			
+			window.location.href = 'Tables (Admin).html';
+		}
+		
+		function handleMenuClick(event) {
+			event.preventDefault();
+			
+			window.location.href = 'Menu.html';
+		}
+		
+		function handleCustomersClick(event) {
+			event.preventDefault();
+			
+			window.location.href = 'Customer Information(Admin).html';
+		}
+	};
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Western Food And Beverages System - Admin Dashboard</h1>
+		<div class="user-info">
+			<div class="profile">
+				<a href="#">Profile</a>
+			</div>
+			<p>Welcome, Aswad</p>
+			<a href="#" class="logout">Logout</a>
+		</div>
+	</header>
+	<nav>
+		<ul>
+			<li><a id="about-link" href="#">About Us</a></li>
+			<li><a id="dashboard-link" href="#">Dashboard</a></li>
+			<li><a id="reservations-link" href="#">Reservations</a></li>
+			<li><a id="tables-link" href="#">Tables</a></li>
+			<li><a id="menu-link" href="#">Menu</a></li>
+			<li><a id="customers-link" href="#">Customers</a></li>
+		</ul>
+	</nav>
+	<main>
+		<h2>Dashboard</h2>
+		<p>Welcome to the admin dashboard of the Western Food And Beverages System. From here you can manage customer order and menu items</p>
+		
+		<div class="dashboard-widgets">
+			<div class="widget">
+				<h3>Total Reservations</h3>
+				<p>3</p>
+			</div>
+			<div class="widget">
+				<h3>Total Tables</h3>
+				<p>7</p>
+			</div>
+			<div class="widget">
+				<h3>Total Menu Items</h3>
+				<p>23</p>
+			</div>
+			<div class="widget">
+				<h3>Total Customers</h3>
+				<p>24</p>
+			</div>
+		</div>
+		
+		<h3>Recent Reservations</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Reservation ID</th>
+					<th>Customer Name</th>
+					<th>Table Number</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Menu</th>
+					<th>Price</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>123</td>
+					<td>Aaliyah</td>
+					<td>1</td>
+					<td>2023-04-01</td>
+					<td>12:00 PM</td>
+					<td>Nasi Goreng</td>
+					<td>RM3.00</td>
+					<td>Confirmed</td>
+				</tr>
+				<tr>
+					<td>124</td>
+					<td>Pavithra</td>
+					<td>2</td>
+					<td>2023-04-02</td>
+					<td>7:00 PM</td>
+					<td>Nasi Ayam</td>
+					<td>RM6.00</td>
+					<td>Pending</td>
+				</tr>
+				<tr>
+					<td>125</td>
+					<td>Bob Johnson</td>
+					<td>3</td>
+					<td>2023-04-03</td>
+					<td>1:00 PM</td>
+					<td>Nasi Goreng Seafood</td>
+					<td>RM10.00</td>
+					<td>Cancelled</td>
+				</tr>
+			</tbody>
+		</table>
+	</main>
+	<footer>
+		<p>&copy; 2024 Western Food And Beverages System. All rights reserved.</p>
+	</footer>
+</body>
+</html>
